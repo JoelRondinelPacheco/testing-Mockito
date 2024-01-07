@@ -7,10 +7,7 @@ import org.joel.mockito_app.repositories.QuestionRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentMatcher;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.*;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.stubbing.Answer;
@@ -35,6 +32,8 @@ class ExamServiceImplTest {
     @InjectMocks
     ExamServiceImpl service;
 
+    @Captor
+    ArgumentCaptor<Long> captor;
     @BeforeEach
     void setUp() {
 //        MockitoAnnotations.openMocks(this); habilitar anotacioes
@@ -181,5 +180,19 @@ class ExamServiceImplTest {
         public String toString() {
             return "Es un mensaje personalizado de error que imprime mockite en caso que falle eltest. [" + argument + "] Debe ser un número positivo";
         }
+    }
+
+
+    @Test
+    void testArgumentCaptor() {
+        when(repository.findAll()).thenReturn(Data.EXAMS);
+        when(questionRepository.findQuestionByExamId(anyLong())).thenReturn(Data.QUESTIONS);
+
+        service.findExamByNameWithQuestions("Matemáticas");
+
+//        ArgumentCaptor<Long> captor = ArgumentCaptor.forClass(Long.class);
+        verify(questionRepository).findQuestionByExamId(captor.capture());
+
+        assertEquals(5L, captor.getValue());
     }
 }
