@@ -7,6 +7,7 @@ import org.joel.mockito_app.repositories.QuestionRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatcher;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -146,5 +147,39 @@ class ExamServiceImplTest {
 //        verify(questionRepository).findQuestionByExamId(argThat(arg -> arg != null && arg.equals(6L)));
         verify(questionRepository).findQuestionByExamId(argThat(arg -> arg != null && arg >= 5L));
         verify(questionRepository).findQuestionByExamId(eq(5L));
+    }
+    @Test
+    void testArgumentMatchers2() {
+        when(repository.findAll()).thenReturn(Data.EXAMS);
+        when(questionRepository.findQuestionByExamId(anyLong())).thenReturn(Data.QUESTIONS);
+        service.findExamByNameWithQuestions("Matemáticas");
+
+        verify(repository).findAll();
+        verify(questionRepository).findQuestionByExamId(argThat(new MyArgsMatchers()));
+    }
+    @Test
+    void testArgumentMatchers3() {
+        when(repository.findAll()).thenReturn(Data.EXAMS);
+        when(questionRepository.findQuestionByExamId(anyLong())).thenReturn(Data.QUESTIONS);
+        service.findExamByNameWithQuestions("Matemáticas");
+
+        verify(repository).findAll();
+        verify(questionRepository).findQuestionByExamId(argThat((arg) -> arg != null && arg > 0));
+    }
+
+
+    public static class MyArgsMatchers implements ArgumentMatcher<Long> {
+
+        private  Long argument;
+        @Override
+        public boolean matches(Long argument) {
+            this.argument = argument;
+            return argument != null && argument > 0;
+        }
+
+        @Override
+        public String toString() {
+            return "Es un mensaje personalizado de error que imprime mockite en caso que falle eltest. [" + argument + "] Debe ser un número positivo";
+        }
     }
 }
