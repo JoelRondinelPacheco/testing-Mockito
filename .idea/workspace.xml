@@ -57,7 +57,23 @@
       <recent name="org.joel.mockito_app.services" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ExamServiceImplTest.testArgumentMatchers">
+    <configuration name="ExamServiceImplTest.testArgumentMatchers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mockito_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.joel.mockito_app.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.joel.mockito_app.services" />
+      <option name="MAIN_CLASS_NAME" value="org.joel.mockito_app.services.ExamServiceImplTest" />
+      <option name="METHOD_NAME" value="testArgumentMatchers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExamServiceImplTest.testExceptionHandler" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mockito_app" />
       <extension name="coverage">
@@ -92,6 +108,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ExamServiceImplTest.testArgumentMatchers" />
         <item itemvalue="JUnit.ExamServiceImplTest.testExceptionHandler" />
         <item itemvalue="JUnit.ExamServiceImplTest.testSaveExam" />
       </list>
