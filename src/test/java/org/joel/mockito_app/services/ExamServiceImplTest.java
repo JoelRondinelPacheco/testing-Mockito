@@ -30,8 +30,7 @@ class ExamServiceImplTest {
 
     @Test
     void findExamByName() {
-        List<Exam> exams = Arrays.asList(new Exam(5L, "Matemáticas"), new Exam(6L, "Lenguaje"), new Exam(7L, "Historia"));
-        when(repository.findAll()).thenReturn(exams);
+        when(repository.findAll()).thenReturn(Data.EXAMS);
         Optional<Exam> exam = service.findExamByName("Matemáticas");
         assertTrue(exam.isPresent());
         assertEquals(5L, exam.orElseThrow().getId());
@@ -44,5 +43,16 @@ class ExamServiceImplTest {
         when(repository.findAll()).thenReturn(exams);
         Optional<Exam> exam = service.findExamByName("Matemáticas");
         assertFalse(exam.isPresent());
+    }
+
+    @Test
+    void testExamQuestions() {
+        when(repository.findAll()).thenReturn(Data.EXAMS);
+        when(questionRepository.findQuestionByExamId(anyLong())).thenReturn(Data.QUESTIONS);
+
+        Exam exam = service.findExamByNameWithQuestions("Matemáticas");
+
+        assertEquals(5, exam.getQuestions().size());
+        assertTrue(exam.getQuestions().contains("arimética"));
     }
 }
