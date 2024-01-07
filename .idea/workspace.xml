@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5631fe84-3d72-4d20-9207-0fe0c4ee3de2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/models/Exam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/repositories/ExamRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/services/ExamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/repositories/ExamRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/services/ExamServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
