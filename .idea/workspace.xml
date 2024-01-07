@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5631fe84-3d72-4d20-9207-0fe0c4ee3de2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/repositories/ExamRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/services/ExamServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/repositories/ExamRepositoryImpl2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/repositories/ExamRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/services/ExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/services/ExamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/services/ExamServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/services/ExamServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/joel/mockito_app/services/ExamServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/joel/mockito_app/services/ExamServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -41,10 +45,20 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "onboarding.tips.debug.path": "/home/joel/Documentos/Testing/app-mockito/src/main/java/org/joel/app-mockito/Main.java"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.joel.mockito_app.services" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
