@@ -1,6 +1,6 @@
-package org.joel.mockito_app.repositories;
+package org.joel.mockito_app.examples.repositories;
 
-import org.joel.mockito_app.models.Exam;
+import org.joel.mockito_app.examples.models.Exam;
 
 import java.util.List;
 

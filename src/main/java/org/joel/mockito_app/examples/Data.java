@@ -1,6 +1,6 @@
-package org.joel.mockito_app.services;
+package org.joel.mockito_app.examples;
 
-import org.joel.mockito_app.models.Exam;
+import org.joel.mockito_app.examples.models.Exam;
 
 import java.util.Arrays;
 import java.util.List;

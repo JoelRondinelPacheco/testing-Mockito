@@ -1,4 +1,4 @@
-package org.joel.mockito_app.models;
+package org.joel.mockito_app.examples.models;
 
 import java.util.ArrayList;
 import java.util.List;

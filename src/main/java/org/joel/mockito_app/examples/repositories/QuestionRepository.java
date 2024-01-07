@@ -1,4 +1,4 @@
-package org.joel.mockito_app.repositories;
+package org.joel.mockito_app.examples.repositories;
 
 import java.util.List;
 

@@ -1,9 +1,11 @@
-package org.joel.mockito_app.services;
+package org.joel.mockito_app.examples.services;
 
-import org.joel.mockito_app.models.Exam;
-import org.joel.mockito_app.repositories.ExamRepository;
-import org.joel.mockito_app.repositories.ExamRepositoryImpl2;
-import org.joel.mockito_app.repositories.QuestionRepository;
+import org.joel.mockito_app.examples.Data;
+import org.joel.mockito_app.examples.models.Exam;
+import org.joel.mockito_app.examples.repositories.ExamRepository;
+import org.joel.mockito_app.examples.repositories.ExamRepositoryImpl;
+import org.joel.mockito_app.examples.repositories.QuestionRepository;
+import org.joel.mockito_app.examples.repositories.QuestionRepositoryImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,7 +14,6 @@ import org.mockito.invocation.InvocationOnMock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.stubbing.Answer;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -25,9 +26,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class ExamServiceImplTest {
 
     @Mock
-    ExamRepository repository;
+    ExamRepositoryImpl repository;
     @Mock
-    QuestionRepository questionRepository;
+    QuestionRepositoryImpl questionRepository;
 
     @InjectMocks
     ExamServiceImpl service;
@@ -251,5 +252,16 @@ class ExamServiceImplTest {
         assertEquals("Física", exam.getName());
         verify(repository).save(any(Exam.class));
         verify(questionRepository).saveQuestions(anyList());
+    }
+
+    @Test
+    void testDoCallRealMethod() {
+        when(repository.findAll()).thenReturn(Data.EXAMS);
+//        when(questionRepository.findQuestionByExamId(anyLong())).thenReturn(Data.QUESTIONS);
+        doCallRealMethod().when(questionRepository).findQuestionByExamId(anyLong());
+        Exam exam = service.findExamByNameWithQuestions("Matemáticas");
+
+        assertEquals(5L, exam.getId());
+        assertEquals("Matemáticas", exam.getName());
     }
 }

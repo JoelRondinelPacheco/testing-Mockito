@@ -1,9 +1,8 @@
-package org.joel.mockito_app.services;
+package org.joel.mockito_app.examples.services;
 
-import net.bytebuddy.agent.builder.AgentBuilder;
-import org.joel.mockito_app.models.Exam;
-import org.joel.mockito_app.repositories.ExamRepository;
-import org.joel.mockito_app.repositories.QuestionRepository;
+import org.joel.mockito_app.examples.models.Exam;
+import org.joel.mockito_app.examples.repositories.ExamRepository;
+import org.joel.mockito_app.examples.repositories.QuestionRepository;
 
 import java.util.List;
 import java.util.Optional;
