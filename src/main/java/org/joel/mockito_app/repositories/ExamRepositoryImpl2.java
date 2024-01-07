@@ -7,6 +7,11 @@ import java.util.concurrent.TimeUnit;
 
 public class ExamRepositoryImpl2 implements ExamRepository{
     @Override
+    public Exam save(Exam exam) {
+        return null;
+    }
+
+    @Override
     public List<Exam> findAll() {
         try {
             System.out.println("Ingreso al metodo");
