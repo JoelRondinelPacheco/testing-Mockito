@@ -14,6 +14,7 @@ import org.mockito.invocation.InvocationOnMock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.stubbing.Answer;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -263,5 +264,26 @@ class ExamServiceImplTest {
 
         assertEquals(5L, exam.getId());
         assertEquals("Matemáticas", exam.getName());
+    }
+
+    @Test
+    void testSpy() {
+        //Tambien se puede hacer con anotaciones
+        ExamRepository examRepository = spy(ExamRepositoryImpl.class);
+        QuestionRepository questionRepository = spy(QuestionRepositoryImpl.class);
+
+        List<String> questions = Arrays.asList("aruemtica");
+//        when(questionRepository.findQuestionByExamId(anyLong())).thenReturn(questions);
+        doReturn(questions).when(questionRepository).findQuestionByExamId(anyLong());
+
+        ExamService examService = new ExamServiceImpl(examRepository, questionRepository);
+        Exam exam = examService.findExamByNameWithQuestions("Matemáticas");
+        assertEquals(5, exam.getId());
+        assertEquals("Matemáticas", exam.getName());
+        assertTrue(exam.getQuestions().contains("arimética"));
+
+        verify(examRepository).findAll();
+        verify(questionRepository).findQuestionByExamId(anyLong());
+
     }
 }

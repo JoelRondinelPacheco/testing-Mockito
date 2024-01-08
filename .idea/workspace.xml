@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5631fe84-3d72-4d20-9207-0fe0c4ee3de2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/examples/repositories/QuestionRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/examples/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/models/Exam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/examples/models/Exam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/repositories/ExamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/examples/repositories/ExamRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/repositories/ExamRepositoryImpl2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/examples/repositories/ExamRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/repositories/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/examples/repositories/QuestionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/services/ExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/examples/services/ExamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/services/ExamServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/examples/services/ExamServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/joel/mockito_app/services/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/joel/mockito_app/examples/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/joel/mockito_app/services/ExamServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/joel/mockito_app/examples/services/ExamServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/joel/mockito_app/examples/services/ExamServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/joel/mockito_app/examples/services/ExamServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +57,29 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.joel.mockito_app.services" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ExamServiceImplTest.testSpy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mockito_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.joel.mockito_app.examples.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.joel.mockito_app.examples.services" />
+      <option name="MAIN_CLASS_NAME" value="org.joel.mockito_app.examples.services.ExamServiceImplTest" />
+      <option name="METHOD_NAME" value="testSpy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ExamServiceImplTest.testSpy" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
