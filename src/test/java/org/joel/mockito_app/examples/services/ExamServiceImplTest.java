@@ -284,6 +284,43 @@ class ExamServiceImplTest {
 
         verify(examRepository).findAll();
         verify(questionRepository).findQuestionByExamId(anyLong());
+    }
 
+    @Test
+    void testInvocationOrder() {
+        when(repository.findAll()).thenReturn(Data.EXAMS);
+
+        service.findExamByNameWithQuestions("Matemáticas");
+        service.findExamByNameWithQuestions("Lenguaje");
+
+        InOrder inOrder = inOrder(questionRepository);
+        inOrder.verify(questionRepository).findQuestionByExamId(6L);
+        inOrder.verify(questionRepository).findQuestionByExamId(5L);
+    }
+
+    @Test
+    void testInvocationOrder2() {
+        when(repository.findAll()).thenReturn(Data.EXAMS);
+
+        service.findExamByNameWithQuestions("Matemáticas");
+        service.findExamByNameWithQuestions("Lenguaje");
+
+        InOrder inOrder = inOrder(repository, questionRepository);
+        inOrder.verify(repository).findAll();
+        inOrder.verify(questionRepository).findQuestionByExamId(6L);
+        inOrder.verify(repository).findAll();
+        inOrder.verify(questionRepository).findQuestionByExamId(5L);
+    }
+
+    @Test
+    void testInvocationTimes() {
+        when(repository.findAll()).thenReturn(Data.EXAMS);
+        service.findExamByNameWithQuestions("Matemáticas");
+
+        verify(questionRepository, times(1)).findQuestionByExamId(5L);
+        verify(questionRepository, atLeast(1)).findQuestionByExamId(5L);
+        verify(questionRepository, atLeastOnce()).findQuestionByExamId(5L);
+        verify(questionRepository, atMost(1)).findQuestionByExamId(5L);
+        verify(questionRepository, atMostOnce(10)).findQuestionByExamId(5L);
     }
 }

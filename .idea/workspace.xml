@@ -57,8 +57,27 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.joel.mockito_app.services" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ExamServiceImplTest.testInvocationOrder">
+    <configuration name="ExamServiceImplTest.testInvocationOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mockito_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.joel.mockito_app.examples.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.joel.mockito_app.examples.services" />
+      <option name="MAIN_CLASS_NAME" value="org.joel.mockito_app.examples.services.ExamServiceImplTest" />
+      <option name="METHOD_NAME" value="testInvocationOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExamServiceImplTest.testSpy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mockito_app" />
       <extension name="coverage">
@@ -77,6 +96,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ExamServiceImplTest.testInvocationOrder" />
         <item itemvalue="JUnit.ExamServiceImplTest.testSpy" />
       </list>
     </recent_temporary>
