@@ -32,23 +32,21 @@ class ExamServiceImplTestSpy {
 
     @InjectMocks
     ExamServiceImpl service;
-        @Test
+
+    @Test
     void testSpy() {
         //Tambien se puede hacer con anotaciones
-        ExamRepository examRepository = spy(ExamRepositoryImpl.class);
-        QuestionRepository questionRepository = spy(QuestionRepositoryImpl.class);
 
-        List<String> questions = Arrays.asList("aruemtica");
+        List<String> questions = Arrays.asList("aroemtica");
 //        when(questionRepository.findQuestionByExamId(anyLong())).thenReturn(questions);
         doReturn(questions).when(questionRepository).findQuestionByExamId(anyLong());
 
-        ExamService examService = new ExamServiceImpl(examRepository, questionRepository);
-        Exam exam = examService.findExamByNameWithQuestions("Matemáticas");
+        Exam exam = service.findExamByNameWithQuestions("Matemáticas");
         assertEquals(5, exam.getId());
         assertEquals("Matemáticas", exam.getName());
         assertTrue(exam.getQuestions().contains("arimética"));
 
-        verify(examRepository).findAll();
+        verify(repository).findAll();
         verify(questionRepository).findQuestionByExamId(anyLong());
 
     }
